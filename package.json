@@ -1,7 +1,7 @@
 {
-  "name": "@flexbase/template-typescript-package",
-  "version": "0.0.1",
-  "description": "template repo for npmjs packages utilizing typescript",
+  "name": "@flexbase/store-react",
+  "version": "1.0.0",
+  "description": "React extensions for @flexbase/store",
   "author": {
     "name": "Flexbase Technologies",
     "email": "hello@flexbase.app",
@@ -9,18 +9,15 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/flexbase-eng/template-typescript-package/issues"
+    "url": "https://github.com/flexbase-eng/store-react/issues"
   },
-  "homepage": "https://github.com/flexbase-eng/template-typescript-package#readme",
+  "homepage": "https://github.com/flexbase-eng/store-react#readme",
   "keywords": [
     "flexbase"
   ],
-  "contributors": [
-    "Chris Fowlkes <chris.fowlkes@flexbase.app>"
-  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flexbase-eng/template-typescript-package.git"
+    "url": "git+https://github.com/flexbase-eng/store-react.git"
   },
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -49,20 +46,31 @@
       "eslint --max-warnings=0"
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "@flexbase/observable-subject": "^1.1.0",
+    "@flexbase/store": "^1.2.0"
+  },
+  "peerDependencies": {
+    "react": "^18.1.0"
+  },
   "devDependencies": {
     "@flexbase/packr": "^1.2.0",
+    "@testing-library/react-hooks": "^8.0.1",
     "@types/jest": "^28.1.4",
     "@types/node": "^18.0.3",
+    "@types/react": "^18.0.17",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
     "@typescript-eslint/parser": "^5.29.0",
     "esbuild": "^0.14.47",
     "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.1",
     "jest": "^28.1.2",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.0",
+    "react": "^18.1.0",
+    "react-test-renderer": "^18.2.0",
     "rollup": "^2.75.7",
     "rollup-plugin-typescript2": "^0.32.1",
     "ts-jest": "^28.0.5",
@@ -88,7 +96,8 @@
       "sourceType": "module"
     },
     "plugins": [
-      "@typescript-eslint"
+      "@typescript-eslint",
+      "react-hooks"
     ],
     "extends": [
       "prettier",
@@ -112,7 +121,9 @@
       ],
       "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/no-non-null-assertion": "warn",
-      "@typescript-eslint/no-inferrable-types": "off"
+      "@typescript-eslint/no-inferrable-types": "off",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
     },
     "env": {
       "browser": true,
