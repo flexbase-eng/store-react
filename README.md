@@ -4,11 +4,11 @@
 
 ## Installation
 
-`npm install @flexbase/observable-subject`
+`npm install @flexbase/store-react`
 
 or
 
-`yarn add @flexbase/observable-subject`
+`yarn add @flexbase/store-react`
 
 ## Usage
 
