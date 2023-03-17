@@ -1,9 +1,10 @@
+import { test, expect } from 'vitest';
 import { createStore } from '@flexbase/store';
 import { useStore } from '../../src/index';
 import { renderHook, act } from '@testing-library/react-hooks';
 
 test('useStore hook', async () => {
-  const store = createStore<number>(options => options.default(1));
+  const store = await createStore<number>(options => options.default(1));
 
   const { result } = renderHook(() => useStore(store));
 
