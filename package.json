@@ -193,7 +193,7 @@
     ]
   },
   "packr": {
-    "output": "output",
+    "output": "dist",
     "properties": [
       "name",
       "version",
@@ -213,7 +213,6 @@
       "keywords"
     ],
     "include": [
-      "dist",
       "README.md",
       "LICENSE",
       "yarn.lock"
