@@ -55,9 +55,6 @@
     "@flexbase/observable-subject": "^1.4.3",
     "@flexbase/store": "^1.2.3"
   },
-  "peerDependencies": {
-    "react": "^18.1.0"
-  },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
