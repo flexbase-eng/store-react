@@ -4,7 +4,7 @@ import { useStore } from '../../src/index';
 import { renderHook, act } from '@testing-library/react-hooks';
 
 test('useStore hook', async () => {
-  const store = await createStore<number>(options => options.default(1));
+  const store = createStore<number>(options => options.defaultValue(1));
 
   const { result } = renderHook(() => useStore(store));
 

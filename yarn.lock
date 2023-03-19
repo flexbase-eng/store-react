@@ -561,10 +561,10 @@
     path "^0.12.7"
     prettier "^2.7.0"
 
-"@flexbase/store@^1.2.2":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@flexbase/store/-/store-1.2.2.tgz#574898adbd14a4e2b5bfd0b4247ea6650731b3b5"
-  integrity sha512-75H9tbGHaFvbWiCFHZwxBGiWyj+4XHZ/Gbkqs2VUpkU8RhxtsmF7lFtX/NC1gMOXSLsXuc2cmYGYCq10VXjgAA==
+"@flexbase/store@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@flexbase/store/-/store-1.2.3.tgz#0863dfea849dc07a26150d8f73069ea7e6b07b16"
+  integrity sha512-0ghElSs9j3VxQXroQwVRnd8JhQ9wB4KD6/1kOgiL8+H117JB+C4fpcVjKxKbvm9psfj81hVXE9L4FaGJfZYQcw==
   dependencies:
     "@flexbase/logger" latest
     "@flexbase/observable-subject" "1.4.3"

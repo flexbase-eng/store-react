@@ -53,7 +53,7 @@
   },
   "dependencies": {
     "@flexbase/observable-subject": "^1.4.3",
-    "@flexbase/store": "^1.2.2"
+    "@flexbase/store": "^1.2.3"
   },
   "peerDependencies": {
     "react": "^18.1.0"
