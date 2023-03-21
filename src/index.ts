@@ -1,2 +1,2 @@
-export { useStore } from './core/use.store';
-export { useStoreLayout } from './core/use.store.layout';
+export { useStore } from './core/use.store.js';
+export { useStoreLayout } from './core/use.store.layout.js';
