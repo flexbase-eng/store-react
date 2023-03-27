@@ -1,3 +1,4 @@
+import { noopSubscription, SubscriptionCallback } from '@flexbase/observable-subject';
 import { Setter, StorageManager, Store } from '@flexbase/store';
 import { useEffect, useState } from 'react';
 
@@ -7,7 +8,7 @@ import { useEffect, useState } from 'react';
  * @param store The store to use
  * @returns A value and function to update it
  */
-export const useStore = <T>(store: Store<T>): [T | undefined, Setter<T>] => {
+export const useStore = <T>(store: Store<T>, subscribe?: SubscriptionCallback<T>): [T | undefined, Setter<T>] => {
   const mgr = StorageManager.lookupManager(store);
 
   if (mgr === undefined) {
@@ -26,7 +27,12 @@ export const useStore = <T>(store: Store<T>): [T | undefined, Setter<T>] => {
       return Promise.resolve();
     });
 
-    return () => subscription.unsubscribe();
+    const sub = subscribe ? mgr.subscribe(store, subscribe) : noopSubscription;
+
+    return () => {
+      sub.unsubscribe();
+      subscription.unsubscribe();
+    };
   }, [mgr, store]);
 
   return [reactState, setter];
