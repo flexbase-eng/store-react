@@ -3,12 +3,12 @@ import { Setter, StorageManager, Store } from '@flexbase/store';
 import { useEffect, useState } from 'react';
 
 /**
- * A hook that attaches a store to a react state
+ * A hook that attaches a store to a react state.
  * Internally it uses `useState` and `useEffect` to create a subscription between the store and react state
  * @param store The store to use
  * @returns A value and function to update it
  */
-export const useStore = <T>(store: Store<T>, subscribe?: SubscriptionCallback<T>): [T | undefined, Setter<T>] => {
+export const useStore = <T>(store: Store<T>, subscribe?: SubscriptionCallback<T>): [T, Setter<T>] => {
   const mgr = StorageManager.lookupManager(store);
 
   if (mgr === undefined) {

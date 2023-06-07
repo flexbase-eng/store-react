@@ -4,7 +4,7 @@ import { useStore } from '../../src/index';
 import { renderHook, act } from '@testing-library/react-hooks';
 
 test('useStore hook', async () => {
-  const store = createStore<number>(options => options.defaultValue(1));
+  const store = createStore<number>(1);
 
   const { result } = renderHook(() => useStore(store));
 
@@ -18,7 +18,7 @@ test('useStore hook', async () => {
 test('useStore hook subscription', async () => {
   let localValue = 0;
 
-  const store = createStore<number>(options => options.defaultValue(1));
+  const store = createStore<number>(1);
 
   const { result, unmount } = renderHook(() =>
     useStore(store, context => {

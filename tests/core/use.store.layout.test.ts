@@ -4,7 +4,7 @@ import { useStoreLayout } from '../../src/index';
 import { renderHook, act } from '@testing-library/react-hooks';
 
 test('useStoreLayout hook', async () => {
-  const store = createStore<number>(options => options.defaultValue(1));
+  const store = createStore<number>(1);
 
   const { result } = renderHook(() => useStoreLayout(store));
 

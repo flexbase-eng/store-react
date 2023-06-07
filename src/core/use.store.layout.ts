@@ -2,12 +2,12 @@ import { Setter, StorageManager, Store } from '@flexbase/store';
 import { useLayoutEffect, useState } from 'react';
 
 /**
- * A hook that attaches a store to a react state
+ * A hook that attaches a store to a react state.
  * Internally it uses `useState` and `useLayoutEffect` to create a subscription between the store and react state
  * @param store The store to use
  * @returns A value and function to update it
  */
-export const useStoreLayout = <T>(store: Store<T>): [T | undefined, Setter<T>] => {
+export const useStoreLayout = <T>(store: Store<T>): [T, Setter<T>] => {
   const mgr = StorageManager.lookupManager(store);
 
   if (mgr === undefined) {
